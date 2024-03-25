@@ -1,0 +1,218 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+nav {
+    display: inline-block;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 15px;
+}
+
+
+
+.intro {
+    padding: 50px 20px;
+    text-align: center;
+}
+.data-table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 80%;
+}
+.data-table td, .data-table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+.data-table th {
+    background-color: #333;
+    color: #fff;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+}
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin:  20px ;
+}
+.subscription-form {
+    margin: 5px;
+}
+.services {
+margin-top: 30px;
+}
+
+
+.service {
+margin-bottom: 20px;
+border: 1px solid #ddd;
+border-radius: 5px;
+padding: 10px;
+background-color: #f9f9f9;
+}
+
+.service img {
+max-width: 100%;
+height: auto;
+display: block;
+margin: 0 auto 10px;
+}
+
+.service h3 {
+font-size: 20px;
+margin-bottom: 10px;
+}
+
+.service p {
+font-size: 16px;
+color: #555;
+}
+/* blurring the image */
+.gfg {
+   
+    width: 100%;
+}
+
+/* designing title and tag line */
+.logo {
+    text-align: center;
+    position: absolute;
+    font-size: 18px;
+    top: 50px;
+    left: 27%;
+    color: white;
+}
+
+
+.navbar {
+    background-color: #333; /* Black background */
+    color: #f2f2f2; /* Text color */
+}
+.navbar-brand {
+    font-size: 24px; /* Adjust the font size for the big title */
+    font-weight: bold;}
+
+
+    .row {
+display: flex;
+flex-wrap: wrap;
+
+}
+
+.col {
+flex: 1 0 18%; /* Four items per row */
+padding: 0 14px; /* Adjust as needed */
+box-sizing: border-box;
+}
+
+.container {
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 10px;
+}
+
+.search-box {
+display: inline-block;
+position: relative;
+}
+
+.search-input {
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 5px;
+font-size: 16px;
+}
+
+.search-button {
+position: absolute;
+top: 0;
+right: 0;
+background-color: #10f3cd;
+color: white;
+border: none;
+padding: 13px;
+border-top-right-radius: 5px;
+border-bottom-right-radius: 5px;
+cursor: pointer;
+}
+
+.search-button:hover {
+background-color: #0056b3;
+}
+
+.fa-search {
+font-size: 18px;
+}
+
+/* Style for Quick Links */
+.quick-links h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .quick-links ul {
+    padding-left: 0;
+  }
+  
+  .quick-links li {
+    list-style-type: none;
+  }
+  
+  .quick-links a {
+    text-decoration: none;
+    color: #ffffff; /* Adjust color as needed */
+  }
+  
+  /* Style for Section Content */
+  .section-content {
+    margin-top: 20px;
+  }
+  
+  .section-content h2 {
+    font-size: 1.5rem;
+  }
+  
+  .section-content p {
+    font-size: 1rem;
+  }
+  
+  .section-content img {
+    max-width: 100%;
+  }
+  
+
+
+@media(min-width:768px){
+    .gfg{
+        display: block !important;
+    }
+}
+
+.section-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+  
+  .section-content h2,
+  .section-content p,
+  .section-content img {
+    margin: 5%; /* Center content horizontally */
+  }
+  
