@@ -23,16 +23,21 @@ nav a {
 .intro {
     padding: 50px 20px;
     text-align: center;
+    font-family:italic ;
+    
 }
+
 .data-table {
+  padding: 50px;
     margin: 0 auto;
     border-collapse: collapse;
     width: 80%;
+    text-align: center;
 }
 .data-table td, .data-table th {
     border: 1px solid #ddd;
     padding: 8px;
-    text-align: left;
+    text-align: center;
 }
 .data-table th {
     background-color: #333;
@@ -54,6 +59,8 @@ footer a {
 }
 .services {
 margin-top: 30px;
+text-align: center;
+
 }
 
 
@@ -96,20 +103,33 @@ color: #555;
     left: 27%;
     color: white;
 }
-
+.para {
+  border: 1px solid #ccc; /* Border style */
+  padding: 10px; /* Padding inside the box */
+  margin-bottom: 20px; /* Spacing between boxes */
+  border: 5px solid gray;
+  
+}
 
 .navbar {
     background-color: #333; /* Black background */
     color: #f2f2f2; /* Text color */
 }
 .navbar-brand {
-    font-size: 24px; /* Adjust the font size for the big title */
-    font-weight: bold;}
-
+    font-size: 25px; /* Adjust the font size for the big title */
+    font-weight: bold;
+  }
+  em {
+    font-style: italic;
+    color: coral;
+  }
+  
+   
 
     .row {
 display: flex;
 flex-wrap: wrap;
+
 
 }
 
@@ -117,7 +137,10 @@ flex-wrap: wrap;
 flex: 1 0 18%; /* Four items per row */
 padding: 0 14px; /* Adjust as needed */
 box-sizing: border-box;
+
 }
+
+
 
 .container {
 display: flex;
@@ -216,3 +239,52 @@ font-size: 18px;
     margin: 5%; /* Center content horizontally */
   }
   
+
+ /* Custom CSS */
+ .card {
+  
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Optional: Adjust spacing or add more styles as needed */
+.mt-5 {
+  margin-top: 3rem !important;
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem !important;
+}
+
+.half-width {
+  width: 50%;
+}
+
+.userForm{
+  
+  text-align: center;
+  height: 50px;
+}
+
+
+.form-group {
+  
+  text-align: center;
+  display: block;
+  width: 100%;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 8px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}

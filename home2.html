@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>.NET Company</title>
+  <!-- Font Awesome CSS -->
+
+  <!-- Custom CSS -->
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <div class="content">
+
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+
+
+
+
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+      <!-- Brand -->
+      <a class="navbar-brand" href="#"><em>.NET Company</em> </a>
+
+      <!-- Toggler/collapsible Button -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navbar links -->
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Content to appear inside the navbar on small screens -->
+    <div class="collapse" id="collapsibleContent">
+      <ul class="list-unstyled">
+        <li>Home</li>
+        <li>About Us</li>
+        <li>Services</li>
+        <li>Contact</li>
+      </ul>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+    </div>
+
+
+  </header>
+
+  <div class="container">
+
+    <!-- background image -->
+    <img class="gfg" src="./photos/pexels-markus-spiske-177598.jpg" alt="hero" style="display:none;" width="200px"
+      height="550">
+
+
+
+
+
+  </div>
+
+  <section>
+    <div>
+      <div class="container">
+        <div class="search-box">
+          <input type="text" class="search-input" placeholder="Search...">
+          <button class="search-button"><i class="fa fa-search"></i></button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class=".justify-content-xxl-center">
+    <!-- ... (input fields from previous example) ... -->
+     <form id="userForm">
+    <div class="form-group" class="d-flex justify-content-center">
+        <label for="firstName">First Name <span class="text-danger">*</span></label>
+        <input type="text" class="form-control" id="firstName" name="firstName" required>
+    </div>
+    <div class="form-group">
+        <label for="lastName">Last Name <span class="text-danger">*</span></label>
+        <input type="text" class="form-control" id="lastName" name="lastName" required>
+    </div>
+    <div class="form-group">
+        <label for="email">Email Address <span class="text-danger">*</span></label>
+        <input type="email" class="form-control" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+        <label for="phone">Phone Number <span class="text-danger">*</span></label>
+        <input type="tel" class="form-control" id="phone" name="phone" required>
+    </div>
+    <div class="form-group">
+        <label for="dob">Date of Birth <span class="text-danger">*</span></label>
+        <input type="date" class="form-control" id="dob" name="dob" required>
+    </div>
+    <div class="form-group">
+        <label for="gender">Gender <span class="text-danger">*</span></label>
+        <select class="form-control" id="gender" name="gender" required>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="address">Address <span class="text-danger">*</span></label>
+        <textarea class="form-control" id="address" name="address" rows="3" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="button" class="btn btn-secondary" id="clearForm">Clear</button>
+    </form>
+
+     <!-- Display submitted data in Bootstrap cards -->
+     <div class="row mt-4" id="userCards">
+        <!-- Cards will be dynamically added here -->
+    </div>
+</div>
+
+
+<!-- Include Bootstrap JS and jQuery -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<!-- Form submission handling -->
+<script>
+    $(document).ready(function() {
+        $("#userForm").submit(function(e) {
+            e.preventDefault();
+            // Get form values
+            var firstName = $('#firstName').val();
+            var lastName = $('#lastName').val();
+            var email = $('#email').val();
+            var phone = $('#phone').val();
+            var dob = $('#dob').val();
+            var gender = $('#gender').val();
+            var address = $('#address').val();
+
+            // Create a Bootstrap card with the submitted data
+            var cardContent = `
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">${firstName} ${lastName}</h5>
+                            <p class="card-text"><strong>Email:</strong> ${email}</p>
+                            <p class="card-text"><strong>Phone:</strong> ${phone}</p>
+                            <p class="card-text"><strong>Date of Birth:</strong> ${dob}</p>
+                            <p class="card-text"><strong>Gender:</strong> ${gender}</p>
+                            <p class="card-text"><strong>Address:</strong> ${address}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            // Append the card to the userCards div
+            $('#userCards').append(cardContent);
+
+            // Clear form fields
+            $('#userForm')[0].reset();
+        });
+    });
+</script>
+
+
+  <section class="intro">
+    <em>
+      <h1 style=" color: rgb(0, 0, 0);  ">.NET Company</h1>
+    </em>
+    <div class="para">
+      <em>
+        <p style=" line-height: 1.8; color: black ; font-size: 20px;"> <b>.NET Company </b> ,a we’re more than just a
+          company — we’re your strategic partner
+          in growth. Our mission is to empower businesses by creating impactful marketing campaigns that drive results.
+          With
+          a team of passionate experts, we’ve evolved over the years, adapting to the ever-changing digital landscape.
+          Our
+          “aha!” moment? Realizing that success lies in understanding our clients’ unique needs and tailoring solutions
+          accordingly. We serve a diverse clientele, from startups to established enterprises, offering services such as
+          brand development, content marketing, SEO, and social media management. Our values of creativity,
+          transparency,
+          and client-centricity guide every project we undertake. Let’s elevate your brand together!</p>
+      </em>
+    </div>
+  </section>
+
+<!--
+
+  <section class="data-table">
+    <h2><em style="color: black;">.NET Company </em></h2>
+    <table>
+      <tr>
+        <th>Service</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>Service 1</td>
+        <td>oracle database </td>
+      </tr>
+      <tr>
+        <td>Service 2</td>
+        <td>C#(C sharp)</td>
+      </tr>
+      <tr>
+        <td>Service 3</td>
+        <td>html css , js</td>
+      </tr>
+
+    </table>
+  </section>
+  
+-->
+  <section class="services">
+    <h2>Our Services</h2>
+    <p>Marketing is the process of satisfying and retaining customers. It is one of the primary components of business
+      management and commerce. Marketing is typically conducted by the seller, whether it’s a retailer or a
+      manufacturer. Products can be marketed to other businesses (B2B) or directly to consumers (B2C) </p>
+
+
+
+  </section>
+  <section>
+
+    <div class="row">
+      <div class="col">
+        <div class="card mb-3 fixed-height-card">
+          <img src="./photos/oracle.png" class="card-img-top fixed-height-img" alt="Product Image 1">
+          <div class="card-body">
+            <h5 class="card-title">Oracle Database</h5>
+            <p class="card-text"> is a widely used relational database management system (RDBMS) developed by Oracle
+              Corporation. </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card mb-3 fixed-height-card">
+          <img src="./photos/c sharp.jpg" class="card-img-top fixed-height-img" alt="Product Image 2">
+          <div class="card-body">
+            <h5 class="card-title">C# (pronounced C sharp) </h5>
+            <p class="card-text">is a modern, object-oriented programming language developed by Microsoft as part of its
+              .NET initiative. </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card mb-3 fixed-height-card">
+          <img src="./photos/html css js.png" class="card-img-top fixed-height-img" alt="Product Image 3">
+          <div class="card-body">
+            <h5 class="card-title">HTML, CSS , JavaScript</h5>
+            <p class="card-text">HTML, CSS, and JavaScript are three fundamental technologies used for building websites
+              and web applications.</p>
+          </div>
+        </div>
+      </div>
+
+
+  </section>
+  </main>
+
+
+
+
+
+  <footer>
+
+    <section>
+
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <a href="https://www.facebook.com" target="_blank">
+              <img src="./photos/facebook.svg" alt="Facebook" width="30" height="30">
+            </a>
+          </div>
+          <div class="col">
+            <a href="https://twitter.com" target="_blank">
+              <img src="./photos/twitter.svg" alt="Twitter" width="30" height="30">
+            </a>
+          </div>
+          <div class="col">
+            <a href="https://www.instagram.com" target="_blank">
+              <img src="./photos/instagram.svg" alt="Instagram" width="30" height="30">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+
+      <div class="container text-center">
+        <div class="row">
+          <div class="col">
+            <h2>Quick Links</h2>
+            <ul class="list-unstyled">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Service</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <h2>programming languages</h2>
+            <p>Un lenguaje de programación es un sistema de notación utilizado para escribir programas de computadora.
+              Estos lenguajes se describen en términos de su sintaxis (forma) y semántica (significado), generalmente
+              definidos por un lenguaje formal. Los lenguajes de programación proporcionan características como un
+              sistema de tipos, variables y mecanismos para el manejo de errores.</p>
+          </div>
+          <div class="col">
+            <br>
+            <br>
+            <br>
+            <br>
+            <img src="./photos/programer.jpg" alt="Image">
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+
+
+  </footer>
+
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
